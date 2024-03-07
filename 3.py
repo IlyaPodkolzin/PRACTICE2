@@ -1,6 +1,5 @@
 import random
 import string
-from ctypes import c_uint32
 
 
 def func31(s):  # 3.1

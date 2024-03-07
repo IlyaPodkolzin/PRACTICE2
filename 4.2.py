@@ -1,3 +1,6 @@
+from ctypes import c_uint32
+
+
 def decrypt(v, k):
     v0 = c_uint32(v[0])
     v1 = c_uint32(v[1])
