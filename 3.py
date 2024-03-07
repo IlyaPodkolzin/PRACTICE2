@@ -30,8 +30,12 @@ def func37(s):  # 3.7
     return (s % sum([int(el) for el in str(s)])) == 0
 
 
-def func38(max_num):
+def func38(max_num):  # 3.8
     return ''.join([random.choice(string.ascii_letters) for _ in range(max_num)])
+
+
+def rle_encode(s):  # 3.9
+    return [(s[i - 1], s[[prev_i for prev_i in range(i - 1, -1, -1) if s[prev_i] != s[i - 1] or prev_i == 0][0]:i].count(s[i - 1])) for i in range(1, len(s) + 1) if i < len(s) and s[i] != s[i - 1] or i == len(s)]
 
 
 # print()
@@ -43,3 +47,4 @@ def func38(max_num):
 # print(func36(['ddsf', 'wrgfhryjyrhgr', 'r']))
 # print(func37(12))
 # print(func38(10))
+# print(rle_encode('ABBCCCDEFAAABBBCCCGHIACCCAAADDGHH'))
